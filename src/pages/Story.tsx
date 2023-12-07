@@ -15,7 +15,7 @@ const Image = ({ text }: { text: string }) => {
       setLoading(true);
 
       try {
-        const { data: response } = await axios.post('https://tlxadfyo2k7tlklew6ez3x3zxq0roffe.lambda-url.us-east-1.on.aws/', { text: `${text}, Thai People, Thailand, Unhappy` });
+        const { data: response } = await axios.post('https://tlxadfyo2k7tlklew6ez3x3zxq0roffe.lambda-url.us-east-1.on.aws/', { text: `${text}, Thailand, Unhappy` });
         setSrc('data:image/png;base64,' + response.image);
       } catch (error: any) {
         console.error(error.message);
