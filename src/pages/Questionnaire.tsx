@@ -1,12 +1,12 @@
 import {Button, Form} from "react-bootstrap";
 import Layout from "../components/Layout";
 import './Questionnaire.css';
-import {ChangeEvent, useState} from "react";
+import {ChangeEvent, useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
 
 const Questionnaire = () => {
     const [form, setForm] = useState({
-        gender: "",
+        gender: "none",
         age: "",
         livesIn: "",
         occupation: "",
@@ -24,9 +24,9 @@ const Questionnaire = () => {
         });
     };
 
-    // useEffect(() => {
-    //     console.log(form)
-    // }, [form]);
+    useEffect(() => {
+        console.log(form)
+    }, [form]);
 
     const handleSelectChange = (e: ChangeEvent<HTMLSelectElement>) => {
         const value = e.target.value;
@@ -37,6 +37,9 @@ const Questionnaire = () => {
     }
 
     const handleSubmit = (e: any) => {
+        if (form.gender === "none") {
+            return alert('Please select gender!')
+        }
         e.preventDefault();
         navigate("/story", {
             state: form
@@ -51,7 +54,8 @@ const Questionnaire = () => {
             <Form>
               <Form.Group controlId="formBasicGender">
                 <Form.Label>Gender</Form.Label>
-                <Form.Select name="gender" value={form.gender} onChange={handleSelectChange}>
+                <Form.Select name="gender" value={form.gender} onChange={handleSelectChange} defaultValue="none">
+                    <option disabled value="none">Please select an option</option>
                   <option value="Male">Male</option>
                   <option value="Female">Female</option>
                   <option value="Secret">Secret</option>
