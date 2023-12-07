@@ -10,7 +10,7 @@ main {
 }
 
 main {
-    background-image: url('assets/background.png');
+    background-image: url('/assets/background.png');
     display: flex;
     padding: 0 30px;
 }
