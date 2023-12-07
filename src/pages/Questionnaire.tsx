@@ -1,6 +1,9 @@
+import Layout from "../components/Layout";
+
 const Questionnaire = () => (
+  <Layout>
     <h1>Questionnaire Page</h1>
-  )
-  
-  export default Questionnaire
-  
+  </Layout>
+)
+
+export default Questionnaire

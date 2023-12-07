@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -6,7 +7,6 @@ import Index from "./pages/Index";
 import Questionnaire from "./pages/Questionnaire";
 import Story from "./pages/Story";
 import RecommendedActions from "./pages/RecommendedActions";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 const router = createBrowserRouter([
   {

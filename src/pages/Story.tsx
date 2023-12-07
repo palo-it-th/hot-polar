@@ -1,6 +1,9 @@
+import Layout from "../components/Layout"
+
 const Story = () => (
+  <Layout>
     <h1>Story Page</h1>
-  )
-  
-  export default Story
-  
+  </Layout>
+)
+
+export default Story
