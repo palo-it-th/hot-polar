@@ -12,7 +12,8 @@ const Story = () => {
     const [paragraphs, setParagraphs] = useState([]);
 
     useEffect(() => {
-        const fetchData = async () =>{
+        const fetchData = async () => {
+            console.log(state.form)
             setLoading(true);
             try {
                 const {data: response} = await axios.post('https://yvaadapva66i7mmveoo7bvni240gpgyi.lambda-url.us-east-1.on.aws/', {

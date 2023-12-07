@@ -42,7 +42,9 @@ const Questionnaire = () => {
         }
         e.preventDefault();
         navigate("/story", {
-            state: form
+            state: {
+                form
+            }
         })
     }
 
@@ -54,7 +56,7 @@ const Questionnaire = () => {
             <Form>
               <Form.Group controlId="formBasicGender">
                 <Form.Label>Gender</Form.Label>
-                <Form.Select name="gender" value={form.gender} onChange={handleSelectChange} defaultValue="none">
+                <Form.Select name="gender" value={form.gender} onChange={handleSelectChange}>
                     <option disabled value="none">Please select an option</option>
                   <option value="Male">Male</option>
                   <option value="Female">Female</option>
