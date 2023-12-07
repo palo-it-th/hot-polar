@@ -3,12 +3,13 @@ import { Container } from 'react-bootstrap';
 import './Layout.css';
 
 interface LayoutProps {
+	className?: string;
 	children: ReactNode;
 }
 
-const Layout = ({ children }: LayoutProps) => {
+const Layout = ({ className, children }: LayoutProps) => {
 	return (
-		<main>
+		<main className={className}>
 			<Container>
 				{children}
 			</Container>

@@ -1,11 +1,11 @@
-h1 {
+.index h1 {
   margin-top: 75px;
 }
 
-p {
+.index p {
   margin-top: 75px;
 }
 
-.btn-primary {
+.index .btn-primary {
   margin-top: 75px;
 }

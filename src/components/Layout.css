@@ -18,7 +18,7 @@ main {
 .container {
     background-color: #fff;
     border-radius: 1rem;
-    max-height: 45rem;
+    max-height: 80%;
     margin-top: 3rem;
     padding: 3rem;
     text-align: center;
@@ -35,12 +35,14 @@ p {
     border: 1px solid var(--theme-primary, #A1B1C9);
 }
 
-.btn.btn-primary:hover, .btn.btn-primary:focus {
+.btn.btn-primary:hover,
+.btn.btn-primary:focus {
     background-color: #93a2b9;
     border: 1px solid var(--theme-primary, #93a2b9);
 }
 
-.btn.btn-primary:active, .btn.btn-primary:focus-visible {
+.btn.btn-primary:active,
+.btn.btn-primary:focus-visible {
     background-color: #93a2b9;
     border: 1px solid var(--theme-primary, #93a2b9);
 }
