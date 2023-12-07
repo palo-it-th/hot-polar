@@ -4,11 +4,6 @@ body {
     height: 100%;
 }
 
-#root,
-main {
-    height: 100%;
-}
-
 main {
     background-image: url('/assets/background.png');
     display: flex;
@@ -18,8 +13,7 @@ main {
 .container {
     background-color: #fff;
     border-radius: 1rem;
-    max-height: 80%;
-    margin-top: 3rem;
+    margin: 3rem 0;
     padding: 3rem;
     text-align: center;
 }
