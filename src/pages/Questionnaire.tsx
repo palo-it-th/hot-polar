@@ -46,7 +46,7 @@ const Questionnaire = () => {
 
   return (
     <Layout className="questionnaire">
-      <h1>Do you wish to know what your future looks like living with air pollution?</h1>
+      <h1>Will the future you envisioned for yourself align with a future plagued by air pollution in 10 years?</h1>
       <p>Please answer a few questions and we will share your future and offer some advice on what you can do.</p>
 
       <Form>
@@ -56,7 +56,8 @@ const Questionnaire = () => {
             <option disabled value="none">Please select an option</option>
             <option value="Male">Male</option>
             <option value="Female">Female</option>
-            <option value="Secret">Secret</option>
+            <option value="LGBTIQA+">LGBTIQA+</option>
+              <option value="no-share">Prefer not to share</option>
           </Form.Select>
 
 

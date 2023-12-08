@@ -56,8 +56,7 @@ const Story = () => {
 
   return (
     <Layout>
-      <h1>Your Future</h1>
-
+      <h1>A glimpse into your future with air pollution</h1>
       {loading ? <Skeleton count={25} highlightColor='#757B82' /> :
         paragraphs.map((text) => (
           <>
