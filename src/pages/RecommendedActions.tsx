@@ -1,6 +1,7 @@
-import { Button, Card } from "react-bootstrap";
+import {Button, Card} from "react-bootstrap";
 import Layout from "../components/Layout"
 import './RecommendedActions.css'
+import {FacebookIcon, FacebookShareButton, LineIcon, LineShareButton} from "react-share";
 
 const actions = [
   {
@@ -54,7 +55,17 @@ const RecommendedActions = () => {
 
   function renderActions(action: any) {
     if (action.webShare) {
-      return <Button onClick={handleShare}>{action.linkName}</Button>
+      // @ts-ignore
+      if (window.navigator.canShare) {
+        return <Button onClick={handleShare}>{action.linkName}</Button>;
+      } else {
+        return (
+            <div style={{margin: 10}}>
+              <FacebookShareButton url='https://hot-polar.com' children={<FacebookIcon size={32} round={true}/>} />
+              <LineShareButton url='https://hot-polar.com' title='Thailand Air Pollution Story' children={<LineIcon  size={32} round={true}/>}/>
+            </div>
+        )
+      }
     } else if (action.linkName && action.link) {
       return <Button href={action.link} variant="primary">{action.linkName}</Button>
     }
