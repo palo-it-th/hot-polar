@@ -27,9 +27,9 @@ const actions = [
   },
   {
     name: "Donate",
-    description: "Donate to Thai CAN and support their important work.",
-    linkName: "Donate",
-    link: '#'
+    description: "Donate to Thai CAN and support their important work. (COMING SOON!)",
+    linkName: "",
+    link: ''
   },
 ]
 
