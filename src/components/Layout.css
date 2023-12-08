@@ -22,9 +22,16 @@ main {
     text-align: center;
 }
 
+h1 {
+    font-family: 'Londrina Solid', sans-serif;
+}
+
+p {
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
 h1,
 p {
-    font-family: 'Londrina Solid', sans-serif;
     color: #525B65;
 }
 
