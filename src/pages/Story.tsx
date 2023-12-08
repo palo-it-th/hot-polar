@@ -11,7 +11,6 @@ import {
     FacebookIcon,
     LineIcon
 } from "react-share";
-import {act} from "react-dom/test-utils";
 
 const Image = ({ text }: { text: string }) => {
   const [src, setSrc] = useState('');
@@ -76,8 +75,8 @@ const Story = () => {
       }
 
       <br />
-      <div>
-        <FacebookShareButton url='https://hot-polar.com' children={<FacebookIcon size={32} round={true}/>}  />
+      <div style={{margin: 10}}>
+        <FacebookShareButton url='https://hot-polar.com' children={<FacebookIcon size={32} round={true}/>} />
         <LineShareButton url='https://hot-polar.com' title='Thailand Air Pollution Story' children={<LineIcon  size={32} round={true}/>}/>
       <ButtonGroup className="me-2">
         {/*<Button href="#">Share to your friends</Button>*/}
