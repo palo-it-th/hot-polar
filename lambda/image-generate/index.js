@@ -12,8 +12,8 @@ async function generateImage(text) {
             imageGenerationConfig: {
                 numberOfImages: 1,
                 quality: "standard",
-                height: 512,
-                width: 512,
+                height: 320,
+                width: 480,
                 cfgScale: 8.0,
                 seed: 0
             }
