@@ -41,6 +41,7 @@ const Story = () => {
   const { state } = useLocation();
   const [loading, setLoading] = useState(false);
   const [paragraphs, setParagraphs] = useState([]);
+  //@ts-ignore
   const [fullStory, setFullStory] = useState('');
 
   useEffect(() => {
