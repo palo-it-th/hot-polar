@@ -1,13 +1,6 @@
 import { Button, Card } from "react-bootstrap";
 import Layout from "../components/Layout"
 import './RecommendedActions.css'
-import {
-  FacebookShareButton,
-  TwitterShareButton,
-  LineShareButton,
-  EmailShareButton
-} from "react-share";
-import {act} from "react-dom/test-utils";
 
 const actions = [
   {

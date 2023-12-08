@@ -5,6 +5,11 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Skeleton from "react-loading-skeleton";
 import 'react-loading-skeleton/dist/skeleton.css'
+import {
+  FacebookShareButton,
+  LineShareButton,
+} from "react-share";
+import {act} from "react-dom/test-utils";
 
 const Image = ({ text }: { text: string }) => {
   const [src, setSrc] = useState('');
@@ -35,6 +40,7 @@ const Story = () => {
   const { state } = useLocation();
   const [loading, setLoading] = useState(false);
   const [paragraphs, setParagraphs] = useState([]);
+  const [fullStory, setFullStory] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
@@ -45,6 +51,7 @@ const Story = () => {
           ...state.form
         });
         setParagraphs(response.split);
+        setFullStory(response.split.join(' '));
       } catch (error: any) {
         console.error(error.message);
       }
@@ -70,6 +77,8 @@ const Story = () => {
 
       <ButtonGroup className="me-2">
         <Button href="#">Share to your friends</Button>
+        {/*<FacebookShareButton url='https://hot-polar.com' children={<></>} />*/}
+        {/*<LineShareButton url='https://hot-polar.com' title='Thailand Air Pollution Story' children={<></>}/>*/}
       </ButtonGroup>
       <ButtonGroup>
         <Button href="/recommended-actions" className="btn btn-primary">Recommended Actions</Button>
