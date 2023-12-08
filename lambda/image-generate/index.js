@@ -22,10 +22,6 @@ async function generateImage(text) {
         const bedrockruntime = new BedrockRuntimeClient({
             region: 'us-east-1',
             apiVersion: '2023-09-30',
-            // credentials: {
-            //     accessKeyId: "AKIAVOFXYERTXCRGIOQT",
-            //     secretAccessKey: "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",
-            // }
         });
 
         const params = {
