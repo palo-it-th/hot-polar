@@ -8,6 +8,8 @@ import 'react-loading-skeleton/dist/skeleton.css'
 import {
   FacebookShareButton,
   LineShareButton,
+    FacebookIcon,
+    LineIcon
 } from "react-share";
 import {act} from "react-dom/test-utils";
 
@@ -74,12 +76,13 @@ const Story = () => {
       }
 
       <br />
-
+      <div>
+        <FacebookShareButton url='https://hot-polar.com' children={<FacebookIcon size={32} round={true}/>}  />
+        <LineShareButton url='https://hot-polar.com' title='Thailand Air Pollution Story' children={<LineIcon  size={32} round={true}/>}/>
       <ButtonGroup className="me-2">
-        <Button href="#">Share to your friends</Button>
-        {/*<FacebookShareButton url='https://hot-polar.com' children={<></>} />*/}
-        {/*<LineShareButton url='https://hot-polar.com' title='Thailand Air Pollution Story' children={<></>}/>*/}
+        {/*<Button href="#">Share to your friends</Button>*/}
       </ButtonGroup>
+      </div>
       <ButtonGroup>
         <Button href="/recommended-actions" className="btn btn-primary">Recommended Actions</Button>
       </ButtonGroup>
